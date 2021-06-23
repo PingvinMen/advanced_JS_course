@@ -46,7 +46,9 @@ class BasketProductList{
         this.goods = [];
         this._featProductsBasket();
         this.renderBasket();
+        this.sumPriceBasket();
     }
+
     _featProductsBasket(){
         this.goods = [
         {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
@@ -54,14 +56,28 @@ class BasketProductList{
         {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
         {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
         {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'}
-        ];
+        ];        
     }
+
     renderBasket(){
         const block = document.querySelector(this.container);
         for(let product of this.goods){
             const item = new BasketProductItem(product);
-            block.insertAdjacentHTML("beforeend",item.renderBasket());   
+            block.insertAdjacentHTML("beforeend",item.renderBasket());
         }
+    }
+
+    sumPriceBasket(){
+        let sumPrice = 0;
+        let lastArr = this.goods.length - 1;
+        for(let i = 0; i <= lastArr; i++){
+            sumPrice += this.goods[i].price;
+        }
+        let x = `<li class="bascet-item-end">
+            <p class="bascet-end-sum">Сумма: ${sumPrice}руб.</p>
+        </li>`;
+        const block = document.querySelector(this.container);
+        block.insertAdjacentHTML("beforeend",x);
     }
 }
 
@@ -72,18 +88,17 @@ class BasketProductItem{
         this.price = product.price;
         this.img = product.img;
     }
+
     renderBasket(){
         return `<li class="bascet-item">
             <img class="bascet-img" src="${this.img}">
             <section class="bascet-info">
                 <p class="bascet-title">${this.title}</p>
                 <p class="bascet-id">Артикул: ${this.id}</p>
-                <p class="bascet-quantity">Колличество: <span class="bascet-quantity-span">${this.quantity}</span></p>
                 <p class="bascet-price">Цена: <span class="bascet-price-span">${this.price}</span>руб.</p>
             </section>
         </li>`
     }
-
 }
 
 let list = new ProductList();
