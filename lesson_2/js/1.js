@@ -35,7 +35,7 @@ class ProductItem{
         <h3 class="product_title">${this.title}</h3>
         <p class="product_price">Цена: ${this.price}</p>
         
-        <button class="but-btn">Купить</button>
+        <button class="but-btn" onclick="Test(${this.id})">Купить</button>
     </div>`
     }
 }
@@ -51,11 +51,11 @@ class BasketProductList{
 
     _featProductsBasket(){
         this.goods = [
-        {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
-        {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
-        {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
-        {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
-        {id: 1, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'}
+        {id: 0, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
+        {id: 0, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
+        {id: 0, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
+        {id: 0, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'},
+        {id: 0, title: 'Продукт 0', price: 2550, img:'./img/1.jpg'}
         ];        
     }
 
@@ -100,6 +100,12 @@ class BasketProductItem{
         </li>`
     }
 }
+
+function Test(text){
+    console.log(text);
+    //listBasket.goods.push({id: 2, title: 'Продукт 12', price: 1000, img:'./img/1.jpg'});
+
+};
 
 let list = new ProductList();
 let listBasket = new BasketProductList();
