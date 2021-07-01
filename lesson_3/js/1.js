@@ -110,8 +110,6 @@ class BasketProductItem{
 let list = new ProductList();
 let listBasket = new BasketProductList();
 
-
-
 /*Добаить в корзину*/
 
     /*Функция поска в каталоге*/
