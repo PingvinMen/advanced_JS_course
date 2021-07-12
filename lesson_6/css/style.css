@@ -1,0 +1,126 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+header{
+    width: auto;
+    min-height: 45px;
+    display: flex;
+    justify-content: space-between;
+    background-color: blue;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.bascet{
+    display: flex;
+    border: 0px solid red;
+    border-radius: 5px;
+}
+
+.nav-icon{
+    display: flex;
+    border-radius: 5px 5px 0 0;
+    padding: 5px;
+}
+
+.bascet-list{
+    /*display: none;*/
+    min-width: 200px;
+    height: auto;
+    position: absolute;
+    border: 0px;
+    right: 10px;
+    top: 40px;
+    border-radius: 5px 0px 5px 5px;
+    background-color: #f0f0f0;
+}
+
+.bascet-item{
+    padding: 5px;
+    display: flex;
+    border-bottom: 1px solid black;
+}
+
+.bascet-img{
+    width: 100px;
+    height: auto;
+}
+
+.bascet-info{
+    margin: auto;
+    padding: 0 10px;
+}
+
+.bascet-item-end{
+    padding: 5px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.bascet:hover .nav-icon, .bascet:hover .bascet-list{
+    background-color: #f0f0f0;
+    /*display: block;*/
+}
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 20px auto;
+    justify-content: space-evenly;
+}
+
+.product_item{
+    display: flex;
+    flex-direction: column;
+}
+
+.product_img{
+    width: 250px;
+}
+
+.product_title{
+    margin: 0 auto;
+}
+
+.product_id{
+    margin: 0 auto;
+}
+
+.product_price{
+    margin: 0 auto;
+}
+
+.but-btn{
+    width: 100px;
+    height: 30px;
+    display: inline;
+    margin: 0 auto;
+    border: none;
+    background-color: #FFF;
+}
+
+.but-btn:hover{
+    background-color: blue;
+    color: #FFF;
+    border-radius: 5px;
+}
